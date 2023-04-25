@@ -51,7 +51,7 @@ color_codes = {
 }
 
 # Read the input file in CSV format
-with open('input.csv', 'r') as f:
+with open('data/input.csv', 'r') as f:
     reader = csv.DictReader(f)
     for row in reader:
         # Parse the start and end dates from the input row
@@ -116,7 +116,7 @@ with open('input.csv', 'r') as f:
                         event['attendees'].append(attendee_obj)
                 event = service.events().insert(calendarId='primary', body=event).execute()
 
-                with open('output.txt', 'a') as f:
+                with open('data/output.txt', 'a') as f:
                     f.write(f'Event created for {current_date_obj}: {event["htmlLink"]}\n')
 
             #Move to the next date
