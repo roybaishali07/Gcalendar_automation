@@ -1,4 +1,2 @@
-summary,description,start_date,end_date,start_time,end_time,weekdays,attendees,type,location
-
-
+summary,description,location,start_date,end_date,start_time,end_time,weekdays,attendees,type,gmap_link
 

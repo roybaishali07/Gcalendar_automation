@@ -37,6 +37,9 @@ def authenticate():
 creds = authenticate()
 service = build(API_SERVICE_NAME, API_VERSION, credentials=creds)
 
+
+
+
 # Define the color codes dictionary
 color_codes = {
     'NLS': '5',  # BANANA
@@ -81,7 +84,8 @@ with open('input.csv', 'r') as f:
                 end_datetime = datetime.datetime.combine(current_date_obj, end_time_obj)
                 event = {
                     'summary': row['summary'],
-                    'description': row['description'],
+                    # 'description': row['description'],
+                    'description': f"{row['description']} - View location on Google Maps: {row['gmap_link']}",
                     'start': {
                         'dateTime': start_datetime.isoformat(),
                         'timeZone': 'Asia/Kolkata',
