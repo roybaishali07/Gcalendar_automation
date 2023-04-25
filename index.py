@@ -41,7 +41,7 @@ service = build(API_SERVICE_NAME, API_VERSION, credentials=creds)
 color_codes = {
     'NLS': '5',  # BANANA
     'FLS' : '9',   #Blueberry
-    'ES': '9',   # BASIL
+    'ES': '10',   # BASIL
     'EN': '6',   # TANGERINE
     'NS': '8',   # GRAPHITE
     'NN': '3',  # GRAPE
