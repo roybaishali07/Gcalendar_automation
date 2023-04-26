@@ -11,7 +11,7 @@ from googleapiclient.discovery import build
 CREDENTIALS_FILE = 'client_secret.json'
 TOKEN_FILE = 'token.pickle'
 INPUT_FILE = 'data/input.csv'
-OUTPUT_FILE = 'output.txt'
+OUTPUT_FILE = 'data/output.txt'
 
 # Define API scopes and version
 API_SERVICE_NAME = 'calendar'
@@ -63,9 +63,9 @@ with open('data/input.csv', 'r') as f:
 
         # Parse the start and end times from the input row
         start_time_str = row['start_time']
-        start_time_obj = datetime.datetime.strptime(start_time_str, '%I.%M%p').time()
+        start_time_obj = datetime.datetime.strptime(start_time_str, '%I:%M %p').time()
         end_time_str = row['end_time']
-        end_time_obj = datetime.datetime.strptime(end_time_str, '%I.%M%p').time()
+        end_time_obj = datetime.datetime.strptime(end_time_str, '%I:%M %p').time()
 
         # Parse the weekdays from the input row
         weekdays_str = row['weekdays']
