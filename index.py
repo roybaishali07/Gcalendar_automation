@@ -135,7 +135,7 @@ with open('data/input.csv', 'r') as f:
                         event['attendees'].append(attendee_obj)
                 event = service.events().insert(calendarId='primary', body=event).execute()
 
-                with open('output.txt', 'a') as f:
+                with open('data/output.txt', 'a') as f:
                     f.write(f'Event created for {current_date_obj}: {event["htmlLink"]}\n')
 
             # Move to the next date
