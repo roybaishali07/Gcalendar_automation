@@ -62,10 +62,8 @@ with open('data/input.csv', 'r') as f:
         end_date_str = row['end_date/number_of_washes']
         if end_date_str.isdigit():
             num_washes = int(end_date_str)
-            print(num_washes)
         else:
             end_date_obj = datetime.datetime.strptime(end_date_str, '%Y-%m-%d').date()
-            print(end_date_obj)
 
 
         # Parse the start and end times from the input row
@@ -93,12 +91,10 @@ with open('data/input.csv', 'r') as f:
 
         if num_washes != 0:
             num_weeks = num_washes//len(weekdays)
-            print(num_weeks)
             num_days = num_weeks * 7
             end_date_obj = start_date_obj + datetime.timedelta(days=num_days)
             num_washes = 0
-        # Loop through each date in the range between start_date and end_date
-        print("End date : ", end_date_obj)
+        # Loop through each date in the range between start_date and end_date)
         current_date_obj = start_date_obj
         while current_date_obj <= end_date_obj:
             # Check if the current date's weekday matches the specified weekdays
