@@ -212,10 +212,10 @@ def main():
     while True:
         choice = input("""
         \n1. Create a new events from csv file.
-        2. Fetch all events from calendar.
-        0.Exit.
+2. Fetch all events from calendar.
+0.Exit.
         
-        Enter your choice : """)
+Enter your choice : """)
 
         if choice == '1':
             createEvents(service)
@@ -231,5 +231,5 @@ def main():
         elif choice == '0':
             break
 
-        
+main()
         
