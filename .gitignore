@@ -1,3 +1,4 @@
 token.pickle
 /dist
 /build
+data/output.csv
